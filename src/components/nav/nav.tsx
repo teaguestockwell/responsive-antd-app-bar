@@ -1,7 +1,7 @@
 import {Grid} from 'antd'
 import {TopMenu} from './top_menu'
 import {SearchBar} from './search_bar'
-import { HamMenu } from './ham_menu'
+import {HamMenu} from './ham_menu'
 import {menuData} from './test_data'
 import './style.css'
 import src from './logo.png'
@@ -23,26 +23,30 @@ export const Nav = () => {
           borderBottom: '0.05em solid #656565',
         }}
       />
-      
-      <HamMenu data={menuData} style={{
-         zIndex: 1,
-         position: 'fixed',
-         left: 0,
-      }}/>
 
-      <div style={{
-        position: 'fixed',
-        zIndex: 1,
-        left: 64,
-        top: 5,
-      }}>
-        <img src={src} alt="my logo"/>
+      <HamMenu
+        data={menuData}
+        style={{
+          zIndex: 1,
+          position: 'fixed',
+          left: 0,
+        }}
+      />
+
+      <div
+        style={{
+          position: 'fixed',
+          zIndex: 1,
+          left: 64,
+          top: 5,
+        }}
+      >
+        <img src={src} alt="my logo" />
       </div>
-      
 
       {lg && (
         <TopMenu
-          itemGroups={menuData.filter((x,i) => i<3)}
+          itemGroups={menuData.filter((x, i) => i < 3)}
           style={{
             zIndex: 1,
             position: 'fixed',
@@ -59,7 +63,7 @@ export const Nav = () => {
             position: 'fixed',
             top: 12,
             left: lg ? 500 : 250,
-            right: 100
+            right: 100,
           }}
         />
       )}

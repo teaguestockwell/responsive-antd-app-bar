@@ -10,14 +10,18 @@ export const TopMenu = ({
   style?: any
 }) => {
   return (
-    <Menu 
-    mode={'horizontal'} 
-    style={{width: '100%', ...style}} 
-    triggerSubMenuAction={'click'}
-
-    forceSubMenuRender>
+    <Menu
+      mode={'horizontal'}
+      style={{width: '100%', ...style}}
+      triggerSubMenuAction={'click'}
+      forceSubMenuRender
+    >
       {itemGroups.map((ig) => (
-        <Menu.SubMenu key={ig.title} title={ig.title} icon={<CaretDownOutlined/>}>
+        <Menu.SubMenu
+          key={ig.title}
+          title={ig.title}
+          icon={<CaretDownOutlined />}
+        >
           {ig.items.map((i) => (
             <Menu.Item key={ig.title + i.name}>{i.name}</Menu.Item>
           ))}

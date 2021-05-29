@@ -5,7 +5,7 @@ import {Nav} from './components/nav/nav'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Nav/>
+    <Nav />
   </React.StrictMode>,
   document.getElementById('root')
 )
