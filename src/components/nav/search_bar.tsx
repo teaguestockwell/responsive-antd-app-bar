@@ -1,6 +1,6 @@
 import {Input} from 'antd'
 const {Search} = Input
-export const SearchBar = ({style}: {style?: any}) => {
+export const SearchBar = ({style, isHamburger}: {style?: any, isHamburger?: boolean}) => {
   const searchFor = `${'frame'}s`
   const onSearch = () => {}
 
@@ -10,7 +10,7 @@ export const SearchBar = ({style}: {style?: any}) => {
         size="large"
         placeholder={`Search ${searchFor}`}
         onSearch={onSearch}
-        style={{width: '100%', position: 'absolute'}}
+        style={{width: '100%', position: isHamburger ? 'relative': 'absolute'}}
       />
     </div>
   )
