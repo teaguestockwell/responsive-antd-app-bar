@@ -1,3 +1,10 @@
+div.ant-drawer-body {
+  padding: 0px;
+}
+
 ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light {
   border-bottom: 0px;
+}
+div.ant-drawer-header{
+  padding: 12px 24px;
 }
