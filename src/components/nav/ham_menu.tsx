@@ -26,7 +26,7 @@ export const HamMenu = ({
       <Button onClick={toggle} icon={<MenuOutlined style={{
           height: '30px',
           fontSize: '150%',
-      }} />} style={{border: 0}} />
+      }} />} style={{border: 0, background: 'transparent', boxShadow:'none'}} />
 
       <Drawer
         closable={false}
