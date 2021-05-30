@@ -1,6 +1,6 @@
 import {Menu} from 'antd'
 import {MenuProp} from './ham_menu'
-import {CaretDownOutlined} from '@ant-design/icons'
+//import {CaretDownOutlined} from '@ant-design/icons'
 
 export const TopMenu = ({
   itemGroups,
@@ -12,7 +12,7 @@ export const TopMenu = ({
   return (
     <Menu
       mode={'horizontal'}
-      style={{width: '270', ...style}}
+      style={style}
       triggerSubMenuAction={'click'}
       forceSubMenuRender
     >
@@ -20,7 +20,7 @@ export const TopMenu = ({
         <Menu.SubMenu
           key={ig.title}
           title={ig.title}
-          icon={<CaretDownOutlined />}
+          //icon={<CaretDownOutlined />}
         >
           {ig.items.map((i) => (
             <Menu.Item key={ig.title + i.name}>{i.name}</Menu.Item>

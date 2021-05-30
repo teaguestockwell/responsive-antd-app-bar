@@ -8,7 +8,7 @@ import src from './logo.png'
 import {ProfileMenu} from './profile_menu'
 
 export const Nav = () => {
-  const {sm, lg} = Grid.useBreakpoint()
+  const {sm, md} = Grid.useBreakpoint()
 
   return (
     <>
@@ -47,7 +47,7 @@ export const Nav = () => {
         <img src={src} alt="my logo" />
       </div>
 
-      {lg && (
+      {md && (
         <TopMenu
           itemGroups={menuData.filter((x, i) => i < 3)}
           style={{
@@ -55,6 +55,7 @@ export const Nav = () => {
             position: 'fixed',
             top: 10,
             left: 225,
+            width: 300
           }}
         />
       )}
@@ -65,7 +66,7 @@ export const Nav = () => {
             zIndex: 1,
             position: 'fixed',
             top: 12,
-            left: lg ? 500 : 250,
+            left: md ? 500 : 250,
             right: 76,
           }}
         />

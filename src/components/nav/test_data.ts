@@ -1,6 +1,6 @@
 export const menuData = [
   {
-    title: 'hello',
+    title: 'Design',
     items: [
       {
         name: 'asdhi',
@@ -17,7 +17,7 @@ export const menuData = [
     ],
   },
   {
-    title: 'hell',
+    title: 'Docs',
     items: [
       {
         name: 'hiaa',
@@ -34,7 +34,7 @@ export const menuData = [
     ],
   },
   {
-    title: 'hel',
+    title: 'Components',
     items: [
       {
         name: 'hiaaa',
