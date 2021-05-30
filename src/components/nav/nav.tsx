@@ -7,8 +7,12 @@ import './style.css'
 import src from './logo.png'
 import {ProfileMenu} from './profile_menu'
 
+
 export const Nav = () => {
   const {sm, md} = Grid.useBreakpoint()
+  // TODO: client side useSession here to get the login state
+  // TODO: _app session provider for useSession
+  const url:string | null = null //'https://lh3.googleusercontent.com/a/AATXAJxZPhzcF9yMhc7yn2bFteLI3KpuEpQJ48h1fQm_=s96-c'
 
   return (
     <>
@@ -67,18 +71,25 @@ export const Nav = () => {
             position: 'fixed',
             top: 12,
             left: md ? 500 : 250,
-            right: 76,
+            right: url ? 76 : 130,
           }}
         />
       )}
 
       <ProfileMenu
-        style={{
+        imgUrl={url ? url : undefined}
+        avatarStyle={{
           zIndex: 1,
           position: 'fixed',
           top: 14,
           right: 18,
           cursor: 'pointer',
+        }}
+        signInStyle={{
+          zIndex: 1,
+          position: 'fixed',
+          top: 16,
+          right: 18,
         }}
       />
     </>

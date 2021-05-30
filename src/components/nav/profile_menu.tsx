@@ -1,18 +1,17 @@
 import {useState} from 'react'
-import {Divider, Drawer, Menu} from 'antd'
+import {Divider, Drawer, Menu, Button} from 'antd'
+import {UserOutlined} from '@ant-design/icons'
 
-export const ProfileMenu = ({style}: {style?: any}) => {
-  const url =
-    'https://lh3.googleusercontent.com/a/AATXAJxZPhzcF9yMhc7yn2bFteLI3KpuEpQJ48h1fQm_=s96-c'
+export const ProfileMenu = ({signInStyle,avatarStyle,imgUrl}: {signInStyle:any,avatarStyle: any, imgUrl?: string | null}) => {
+  
   const [open, setOpen] = useState(false)
   const toggle = () => setOpen(!open)
 
-  return (
-    <>
-      <div style={style}>
+  return imgUrl ? <>
+      <div style={avatarStyle}>
         <img
           onClick={toggle}
-          src={url}
+          src={imgUrl}
           alt={'profile pic'}
           style={{
             borderRadius: 100,
@@ -30,7 +29,7 @@ export const ProfileMenu = ({style}: {style?: any}) => {
         title={
           <div style={{display: 'flex', padding: '6px 0px'}}>
             <img
-              src={url}
+              src={imgUrl}
               alt={'profile pic'}
               style={{
                 borderRadius: 100,
@@ -61,5 +60,5 @@ export const ProfileMenu = ({style}: {style?: any}) => {
         </Menu>
       </Drawer>
     </>
-  )
+  : <Button onClick={() => console.log('user wants to login')} style={signInStyle} type="primary" icon={<UserOutlined />}>Sign in</Button>
 }
