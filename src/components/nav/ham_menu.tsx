@@ -23,15 +23,7 @@ export const HamMenu = ({
 
   return (
     <div style={style}>
-      <Button
-        onClick={toggle}
-        icon={<MenuOutlined />}
-        style={{
-          marginTop: '15px',
-          marginLeft: '15px',
-          border: '0px solid transparent',
-        }}
-      />
+      <Button onClick={toggle} icon={<MenuOutlined />} style={{border: 0}} />
 
       <Drawer
         closable={false}
@@ -43,15 +35,15 @@ export const HamMenu = ({
       >
         <Menu mode="inline" style={{width: '100%', padding: '10px'}}>
           {itemGroups.map((ig) => (
-            <>
-              <Menu.ItemGroup key={ig.title} title={ig.title}>
+            <div key={ig.title}>
+              <Menu.ItemGroup title={ig.title}>
                 {ig.items.map((i) => (
                   // TODO: next router here
                   <Menu.Item key={ig.title + i.name}>{i.name}</Menu.Item>
                 ))}
               </Menu.ItemGroup>
               <Divider />
-            </>
+            </div>
           ))}
         </Menu>
       </Drawer>

@@ -2,12 +2,20 @@ import {useState} from 'react'
 import {Divider, Drawer, Menu, Button} from 'antd'
 import {UserOutlined} from '@ant-design/icons'
 
-export const ProfileMenu = ({signInStyle,avatarStyle,user}: {signInStyle:any,avatarStyle: any, user?: {email:string, img:string} | null}) => {
-  
+export const ProfileMenu = ({
+  signInStyle,
+  avatarStyle,
+  user,
+}: {
+  signInStyle: any
+  avatarStyle: any
+  user?: {email: string; img: string} | null
+}) => {
   const [open, setOpen] = useState(false)
   const toggle = () => setOpen(!open)
 
-  return user ? <>
+  return user ? (
+    <>
       <div style={avatarStyle}>
         <img
           onClick={toggle}
@@ -61,5 +69,14 @@ export const ProfileMenu = ({signInStyle,avatarStyle,user}: {signInStyle:any,ava
         </Menu>
       </Drawer>
     </>
-  : <Button onClick={() => console.log('user wants to login')} style={signInStyle} type="primary" icon={<UserOutlined />}>Sign in</Button>
+  ) : (
+    <Button
+      onClick={() => console.log('user wants to login')}
+      style={signInStyle}
+      type="primary"
+      icon={<UserOutlined />}
+    >
+      Sign in
+    </Button>
+  )
 }

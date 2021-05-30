@@ -7,12 +7,11 @@ import './style.css'
 import src from './logo.png'
 import {ProfileMenu} from './profile_menu'
 
-
 export const Nav = () => {
   const {sm, md} = Grid.useBreakpoint()
   // TODO: client side useSession here to get the login state
   // TODO: _app session provider for useSession
-  const mockUser: {email:string,img:string} | null = null //{email:'email.com', img:'https://lh3.googleusercontent.com/a/AATXAJxZPhzcF9yMhc7yn2bFteLI3KpuEpQJ48h1fQm_=s96-c'}
+  const mockUser: {email: string; img: string} | null = null //{email:'email.com', img:'https://lh3.googleusercontent.com/a/AATXAJxZPhzcF9yMhc7yn2bFteLI3KpuEpQJ48h1fQm_=s96-c'}
 
   return (
     <>
@@ -34,7 +33,8 @@ export const Nav = () => {
         style={{
           zIndex: 1,
           position: 'fixed',
-          left: 0,
+          left: 15,
+          top: 15,
         }}
       />
 
@@ -59,7 +59,7 @@ export const Nav = () => {
             position: 'fixed',
             top: 10,
             left: 225,
-            width: 300
+            width: 300,
           }}
         />
       )}
