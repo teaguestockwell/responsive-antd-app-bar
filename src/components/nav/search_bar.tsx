@@ -13,7 +13,6 @@ export const SearchBar = ({
   return (
     <div style={style}>
       <Search
-        size="large"
         placeholder={`Search ${searchFor}`}
         onSearch={onSearch}
         style={{width: '100%', position: isHamburger ? 'relative' : 'absolute'}}

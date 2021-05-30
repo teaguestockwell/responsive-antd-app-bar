@@ -11,20 +11,20 @@ export const Nav = () => {
   const {sm, md} = Grid.useBreakpoint()
   // TODO: client side useSession here to get the login state
   // TODO: _app session provider for useSession
-  const mockUser: {email: string; img: string} | null = null //{email:'email.com', img:'https://lh3.googleusercontent.com/a/AATXAJxZPhzcF9yMhc7yn2bFteLI3KpuEpQJ48h1fQm_=s96-c'}
+  const mockUser: {email: string; img: string} | null = {email:'email.com', img:'https://lh3.googleusercontent.com/a/AATXAJxZPhzcF9yMhc7yn2bFteLI3KpuEpQJ48h1fQm_=s96-c'}
 
   return (
     <>
       <div
         style={{
           zIndex: 1,
-          height: 65,
+          height: 58,
           backgroundColor: 'white',
           position: 'fixed',
           left: 0,
           top: 0,
           right: 0,
-          borderBottom: '0.05em solid #656565',
+          borderBottom: '1px solid #656565',
         }}
       />
 
@@ -33,8 +33,8 @@ export const Nav = () => {
         style={{
           zIndex: 1,
           position: 'fixed',
-          left: 15,
-          top: 15,
+          left: 14,
+          top: 14,
         }}
       />
 
@@ -43,8 +43,8 @@ export const Nav = () => {
         style={{
           position: 'fixed',
           zIndex: 1,
-          left: 64,
-          top: 5,
+          left: 60,
+          top: 2,
           cursor: 'pointer',
         }}
       >
@@ -57,8 +57,8 @@ export const Nav = () => {
           style={{
             zIndex: 1,
             position: 'fixed',
-            top: 10,
-            left: 225,
+            top: 4,
+            left: 216,
             width: 300,
           }}
         />
@@ -70,8 +70,8 @@ export const Nav = () => {
             zIndex: 1,
             position: 'fixed',
             top: 12,
-            left: md ? 500 : 250,
-            right: mockUser ? 76 : 130,
+            left: md ? 500 : 234,
+            right: mockUser ? 72 : 134,
           }}
         />
       )}
@@ -81,14 +81,14 @@ export const Nav = () => {
         avatarStyle={{
           zIndex: 1,
           position: 'fixed',
-          top: 14,
+          top: 10,
           right: 18,
           cursor: 'pointer',
         }}
         signInStyle={{
           zIndex: 1,
           position: 'fixed',
-          top: 16,
+          top: 12,
           right: 18,
         }}
       />
