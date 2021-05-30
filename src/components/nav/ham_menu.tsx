@@ -36,7 +36,7 @@ export const HamMenu = ({
       <Drawer
         closable={false}
         style={{padding: '0px'}}
-        title={<SearchBar isHamburger/>}
+        title={<SearchBar isHamburger />}
         placement="left"
         visible={open}
         onClose={toggle}

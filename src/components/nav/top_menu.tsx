@@ -12,7 +12,7 @@ export const TopMenu = ({
   return (
     <Menu
       mode={'horizontal'}
-      style={{width: '100%', ...style}}
+      style={{width: '270', ...style}}
       triggerSubMenuAction={'click'}
       forceSubMenuRender
     >
