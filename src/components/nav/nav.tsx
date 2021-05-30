@@ -12,7 +12,7 @@ export const Nav = () => {
   const {sm, md} = Grid.useBreakpoint()
   // TODO: client side useSession here to get the login state
   // TODO: _app session provider for useSession
-  const url:string | null = null //'https://lh3.googleusercontent.com/a/AATXAJxZPhzcF9yMhc7yn2bFteLI3KpuEpQJ48h1fQm_=s96-c'
+  const mockUser: {email:string,img:string} | null = null //{email:'email.com', img:'https://lh3.googleusercontent.com/a/AATXAJxZPhzcF9yMhc7yn2bFteLI3KpuEpQJ48h1fQm_=s96-c'}
 
   return (
     <>
@@ -71,13 +71,13 @@ export const Nav = () => {
             position: 'fixed',
             top: 12,
             left: md ? 500 : 250,
-            right: url ? 76 : 130,
+            right: mockUser ? 76 : 130,
           }}
         />
       )}
 
       <ProfileMenu
-        imgUrl={url ? url : undefined}
+        user={mockUser}
         avatarStyle={{
           zIndex: 1,
           position: 'fixed',

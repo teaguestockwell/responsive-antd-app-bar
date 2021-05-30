@@ -2,16 +2,16 @@ import {useState} from 'react'
 import {Divider, Drawer, Menu, Button} from 'antd'
 import {UserOutlined} from '@ant-design/icons'
 
-export const ProfileMenu = ({signInStyle,avatarStyle,imgUrl}: {signInStyle:any,avatarStyle: any, imgUrl?: string | null}) => {
+export const ProfileMenu = ({signInStyle,avatarStyle,user}: {signInStyle:any,avatarStyle: any, user?: {email:string, img:string} | null}) => {
   
   const [open, setOpen] = useState(false)
   const toggle = () => setOpen(!open)
 
-  return imgUrl ? <>
+  return user ? <>
       <div style={avatarStyle}>
         <img
           onClick={toggle}
-          src={imgUrl}
+          src={user.img}
           alt={'profile pic'}
           style={{
             borderRadius: 100,
@@ -29,7 +29,7 @@ export const ProfileMenu = ({signInStyle,avatarStyle,imgUrl}: {signInStyle:any,a
         title={
           <div style={{display: 'flex', padding: '6px 0px'}}>
             <img
-              src={imgUrl}
+              src={user.img}
               alt={'profile pic'}
               style={{
                 borderRadius: 100,
@@ -54,6 +54,7 @@ export const ProfileMenu = ({signInStyle,avatarStyle,imgUrl}: {signInStyle:any,a
       >
         <Menu mode="inline" style={{width: '100%', padding: '10px'}}>
           <Menu.ItemGroup key={'title'} title={'title'}>
+            {/* TODO: add user specific links here, with the user.email */}
             <Menu.Item key={'ig.title + i.name'}>{'name'}</Menu.Item>
           </Menu.ItemGroup>
           <Divider />
